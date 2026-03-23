@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <title>AeroParams</title>
+    <script src="library/xlsx.min.js"></script>
+    <script src="library/plotly.min.js"></script>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        font-family: sans-serif;
+        padding: 16px;
+        gap: 16px;
+      }
+      #toolbar {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+      }
+      #main {
+        display: flex;
+        gap: 24px;
+      }
+      #params {
+        width: 280px;
+        overflow-y: auto;
+        max-height: 85vh;
+        border-right: 1px solid #ccc;
+        padding-right: 16px;
+      }
+      #charts {
+        flex: 1;
+      }
+      input {
+        width: 160px;
+        margin-bottom: 4px;
+      }
+      hr {
+        margin: 8px 0;
+        border: none;
+        border-top: 1px solid #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="toolbar">
+  <input type="file" id="upload">
+  <button id="renderizar">Renderizar</button>
+  <button id="exportar">Exportar</button>
+</div>
+    <div id="main">
+      <div id="params"></div>
+      <div id="charts"></div>
+    </div>
+    <script src="src/main.js" type="module"></script>
+  </body>
+</html>
